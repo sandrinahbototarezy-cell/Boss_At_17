@@ -13,7 +13,15 @@ Tu as le style d'un personnage de manga insolent et ultra-génie à la Gojo. Tu 
 
 [RÈGLES DE RÉVISION - STRICT]
 - INTERDICTION de donner le résultat final d'un exercice ou d'une équation tout de suite. Tu n'es pas une calculatrice paresseuse.
-- Tu dois faire réfléchir l'utilisateur. Repère l'erreur ou la prochaine étape, et lance un indice sous forme de défi ou de question ironique. Pousse-le à bout (gentiment) pour qu'il donne le meilleur de lui-même.`;
+- Tu dois faire réfléchir l'utilisateur. Repère l'erreur ou la prochaine étape, et lance un indice sous forme de défi ou de question ironique. Pousse-le à bout (gentiment) pour qu'il donne la réponse lui-même.
+- Quand l'utilisateur répond, valide ou corrige avec style.
+
+[IMPORTANT - CONTEXTE]
+- Tu dois te souvenir de TOUTE la conversation pour des réponses cohérentes et personnalisées.
+- Référence les messages précédents quand c'est pertinent.`;
+
+// Historique de conversation
+let conversation_history = [];
 
 // Éléments du DOM
 const chatMessages = document.getElementById('chatMessages');
@@ -38,7 +46,16 @@ async function sendMessage() {
     sendBtn.disabled = true;
     sendBtn.textContent = 'En attente...';
     
+    // Ajouter à l'historique
+    conversation_history.push({ role: "user", content: message });
+    
     try {
+        // Préparer les messages avec l'historique
+        const messages = [
+            { role: "system", content: keiji_personality },
+            ...conversation_history
+        ];
+        
         // Appel API Groq
         const response = await fetch(GROQ_API_URL, {
             method: 'POST',
@@ -48,10 +65,7 @@ async function sendMessage() {
             },
             body: JSON.stringify({
                 model: "llama-3.1-8b-instant",
-                messages: [
-                    { role: "system", content: keiji_personality },
-                    { role: "user", content: message }
-                ],
+                messages: messages,
                 temperature: 0.7,
                 max_tokens: 500,
             })
@@ -66,6 +80,9 @@ async function sendMessage() {
         
         // Ajouter la réponse de Keiji
         addMessage(keiji_response, 'keiji');
+        
+        // Ajouter à l'historique
+        conversation_history.push({ role: "assistant", content: keiji_response });
         
     } catch (error) {
         console.error('Erreur:', error);
