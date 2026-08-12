@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keiji - Assistant Virtuel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="chat-header">
+            <div class="header-content">
+                <div class="avatar-container">
+                    <img src="keiji-avatar.svg" alt="Keiji" class="keiji-avatar">
+                </div>
+                <div class="header-text">
+                    <h1>Keiji</h1>
+                    <p>Ton assistant personnel insolent</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chat-messages" id="chatMessages">
+            <div class="message keiji-message">
+                <p>Yo ! C'est Keiji ! 🔥 Alors, t'as besoin de quoi ? Vas-y, lance ta question !</p>
+            </div>
+        </div>
+        
+        <div class="chat-input-area">
+            <input 
+                type="text" 
+                id="userInput" 
+                class="chat-input" 
+                placeholder="Écris ton message..."
+                autocomplete="off"
+            >
+            <button id="sendBtn" class="send-btn">Envoyer</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
