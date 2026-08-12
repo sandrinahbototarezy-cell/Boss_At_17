@@ -1,0 +1,52 @@
+<svg viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg">
+  <!-- Capuche -->
+  <defs>
+    <linearGradient id="hoodGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a4a4a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2a2a2a;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Capuche arrière -->
+  <path d="M 50 60 Q 50 20 100 20 Q 150 20 150 60 L 150 90 Q 100 110 50 90 Z" fill="url(#hoodGradient)" stroke="#1a1a1a" stroke-width="2"/>
+  
+  <!-- Tête -->
+  <circle cx="100" cy="100" r="45" fill="#E0B8A0" stroke="#D4A574" stroke-width="2"/>
+  
+  <!-- Cheveux (qui dépassent) -->
+  <path d="M 60 75 Q 50 60 55 45 Q 70 35 100 30 Q 130 35 145 45 Q 150 60 140 75" fill="#3a3a3a" stroke="#2a2a2a" stroke-width="2"/>
+  
+  <!-- Cheveux mèches devant -->
+  <path d="M 70 75 Q 65 65 68 50" stroke="#3a3a3a" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M 130 75 Q 135 65 132 50" stroke="#3a3a3a" stroke-width="3" fill="none" stroke-linecap="round"/>
+  
+  <!-- Yeux -->
+  <ellipse cx="80" cy="90" rx="8" ry="12" fill="#7a7a7a" stroke="#4a4a4a" stroke-width="1.5"/>
+  <ellipse cx="120" cy="90" rx="8" ry="12" fill="#7a7a7a" stroke="#4a4a4a" stroke-width="1.5"/>
+  
+  <!-- Reflets yeux (éclat) -->
+  <circle cx="83" cy="87" r="3" fill="#ffffff"/>
+  <circle cx="123" cy="87" r="3" fill="#ffffff"/>
+  
+  <!-- Sourcils -->
+  <path d="M 70 80 Q 80 77 90 80" stroke="#3a3a3a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M 110 80 Q 120 77 130 80" stroke="#3a3a3a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  
+  <!-- Nez -->
+  <line x1="100" y1="95" x2="100" y2="105" stroke="#D4A574" stroke-width="1.5" stroke-linecap="round"/>
+  
+  <!-- Bouche - Sourire narquois -->
+  <path d="M 85 115 Q 100 125 115 115" stroke="#3a3a3a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- Petit trait de travers pour l'insolence -->
+  <path d="M 115 115 L 120 112" stroke="#3a3a3a" stroke-width="2" fill="none" stroke-linecap="round"/>
+  
+  <!-- Sweat/Vêtement -->
+  <ellipse cx="100" cy="160" rx="50" ry="35" fill="#5a5a5a" stroke="#3a3a3a" stroke-width="2"/>
+  
+  <!-- Col du sweat -->
+  <ellipse cx="100" cy="140" rx="45" ry="15" fill="#5a5a5a" stroke="#3a3a3a" stroke-width="2"/>
+  
+  <!-- Détails sweat (cordon capuche) -->
+  <line x1="90" y1="145" x2="85" y2="155" stroke="#4a4a4a" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="110" y1="145" x2="115" y2="155" stroke="#4a4a4a" stroke-width="1.5" stroke-linecap="round"/>
+</svg>
