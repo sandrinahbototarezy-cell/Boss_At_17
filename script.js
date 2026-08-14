@@ -1,7 +1,8 @@
-// Configuration API Groq
-// La clé API est maintenant dans .env.local (sécurisée !)
-const GROQ_API_KEY = process.env.GROQ_API_KEY || "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";
-const GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions";
+// Configuration Google AI Studio
+const API_URL = "https://generativelanguage.googleapis.com/v1beta/openai/";
+
+
+
 
 // Personnalité de Keiji
 const keiji_personality = `Tu t'appelles Keiji. Tu es l'assistant personnel et le pote virtuel de l'utilisateur.
