@@ -1,6 +1,7 @@
 
-const API_KEY = "AQ.Ab8RN6Iacs7e7RnaDfoQ_D4y6d5I8LsnvvP-bdHL-UHyIpJZsg";
-const API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=" + API_KEY;
+const apiKey = "AQ.Ab8RN6Iacs7e7RnaDfoQ_D4y6d5I8LsnvvP-bdHL-UHyIpJZsg";
+
+
 
 
 
